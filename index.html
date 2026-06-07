@@ -740,30 +740,20 @@
 
   <div class="page-footer">
     
-    <section class="visitor-map" aria-labelledby="visitor-map-title">
+    <section class="visitor-map" aria-label="Visitor map">
       <div class="container">
-        <div class="visitor-map-card">
-          <div class="visitor-map-copy">
-            <p class="visitor-map-eyebrow">Live visitor map</p>
-            <h2 id="visitor-map-title">Where visitors are reading from</h2>
-            <p>Open the map to see recent site visits visualized on an interactive RevolverMaps globe.</p>
-          </div>
-          <details class="visitor-map-toggle">
-            <summary>View visitor map</summary>
-            <div
-              id="visitor-map-widget"
-              class="visitor-map-widget"
-              data-revolver-src="https://rf.revolvermaps.com/0/0/1.js?i=5d4snb3frum&amp;s=300&amp;m=0&amp;v=true&amp;r=false&amp;b=ffffff&amp;n=false&amp;c=1565c0"
-            >
-              <p class="visitor-map-loading" role="status">Loading visitor map…</p>
-            </div>
-            <noscript>
-              <p class="visitor-map-noscript">
-                JavaScript is required to display the embedded globe.
-                <a href="https://www.revolvermaps.com/" target="_blank" rel="noopener">Open RevolverMaps</a>.
-              </p>
-            </noscript>
-          </details>
+        <div class="visitor-map-widget">
+          <script type="text/javascript" src="https://rf.revolvermaps.com/0/0/1.js?i=5d4snb3frum&amp;s=180&amp;m=0&amp;v=true&amp;r=false&amp;b=ffffff&amp;n=false&amp;c=1565c0"></script>
+          <noscript>
+            <a
+              class="visitor-map-fallback-globe"
+              href="https://www.revolvermaps.com/"
+              target="_blank"
+              rel="noopener"
+              aria-label="Open visitor map"
+              title="Open visitor map"
+            ></a>
+          </noscript>
         </div>
       </div>
     </section>
@@ -853,7 +843,6 @@
 
 <script src="/en/js/wowchemy.min.71e713848164e269bc250f377042949d.js"></script>
 
-<script src="/js/visitor-map.js" defer></script>
 
 </body>
 </html>
