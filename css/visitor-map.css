@@ -1,55 +1,123 @@
 .visitor-map {
-  padding: 1.5rem 0 2rem;
+  padding: 2.5rem 0 3rem;
+}
+
+.visitor-map-card {
+  align-items: center;
+  background: linear-gradient(135deg, rgba(21, 101, 192, 0.08), rgba(21, 101, 192, 0.02));
+  border: 1px solid rgba(21, 101, 192, 0.16);
+  border-radius: 18px;
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
+  display: flex;
+  gap: 1.5rem;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 920px;
+  padding: 1.5rem;
+}
+
+.visitor-map-copy {
+  text-align: left;
+}
+
+.visitor-map-eyebrow {
+  color: #1565c0;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  margin-bottom: 0.35rem;
+  text-transform: uppercase;
+}
+
+.visitor-map-copy h2 {
+  font-size: 1.35rem;
+  margin-bottom: 0.35rem;
+}
+
+.visitor-map-copy p:last-child {
+  color: rgba(0, 0, 0, 0.62);
+  margin-bottom: 0;
+}
+
+.visitor-map-toggle {
+  flex: 0 0 auto;
   text-align: center;
 }
 
-.visitor-map-widget {
+.visitor-map-toggle summary {
+  background: #1565c0;
+  border-radius: 999px;
+  color: #fff;
+  cursor: pointer;
   display: inline-block;
-  line-height: 0;
-  max-width: 100%;
+  font-weight: 700;
+  list-style: none;
+  padding: 0.7rem 1.2rem;
+  transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
-.visitor-map-fallback-globe {
-  align-items: center;
-  background:
-    radial-gradient(circle at 34% 28%, rgba(255, 255, 255, 0.92) 0 7%, transparent 8%),
-    radial-gradient(circle at 50% 50%, rgba(21, 101, 192, 0.12) 0 30%, transparent 31%),
-    linear-gradient(90deg, transparent 47%, rgba(255, 255, 255, 0.8) 48% 52%, transparent 53%),
-    linear-gradient(0deg, transparent 47%, rgba(255, 255, 255, 0.8) 48% 52%, transparent 53%),
-    repeating-linear-gradient(90deg, transparent 0 18%, rgba(255, 255, 255, 0.35) 19% 20%, transparent 21% 38%),
-    linear-gradient(135deg, #0d47a1, #1565c0 48%, #26c6da);
-  border-radius: 50%;
-  box-shadow: 0 14px 32px rgba(21, 101, 192, 0.28), inset -16px -14px 28px rgba(0, 0, 0, 0.22);
-  display: inline-flex;
-  height: 86px;
-  justify-content: center;
-  overflow: hidden;
-  position: relative;
-  transition: box-shadow 0.2s ease, transform 0.2s ease;
-  width: 86px;
+.visitor-map-toggle summary::-webkit-details-marker {
+  display: none;
 }
 
-.visitor-map-fallback-globe::before,
-.visitor-map-fallback-globe::after {
-  border: 2px solid rgba(255, 255, 255, 0.58);
-  border-radius: 50%;
-  content: "";
-  inset: 12px 28px;
-  position: absolute;
-}
-
-.visitor-map-fallback-globe::after {
-  inset: 28px 12px;
-}
-
-.visitor-map-fallback-globe:hover,
-.visitor-map-fallback-globe:focus {
-  box-shadow: 0 18px 42px rgba(21, 101, 192, 0.34), inset -16px -14px 28px rgba(0, 0, 0, 0.22);
+.visitor-map-toggle summary:hover,
+.visitor-map-toggle summary:focus {
+  background: #0d417b;
   outline: none;
-  transform: translateY(-2px) scale(1.04);
+  transform: translateY(-1px);
 }
 
-.visitor-map-fallback-globe:focus-visible {
-  outline: 3px solid rgba(21, 101, 192, 0.35);
-  outline-offset: 6px;
+.visitor-map-widget {
+  align-items: center;
+  background: #fff;
+  border-radius: 14px;
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  min-height: 320px;
+  min-width: 320px;
+  overflow: hidden;
+  padding: 0.75rem;
+}
+
+.visitor-map-frame {
+  border: 0;
+  height: 320px;
+  width: 320px;
+}
+
+.visitor-map-loading,
+.visitor-map-error,
+.visitor-map-noscript {
+  color: rgba(0, 0, 0, 0.62);
+  margin: 0;
+}
+
+.dark .visitor-map-card {
+  background: linear-gradient(135deg, rgba(21, 101, 192, 0.18), rgba(255, 255, 255, 0.04));
+  border-color: rgba(255, 255, 255, 0.14);
+}
+
+.dark .visitor-map-copy p:last-child,
+.dark .visitor-map-loading,
+.dark .visitor-map-error,
+.dark .visitor-map-noscript {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+@media (max-width: 767.98px) {
+  .visitor-map-card {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .visitor-map-toggle,
+  .visitor-map-copy {
+    text-align: center;
+  }
+
+  .visitor-map-widget {
+    min-width: 0;
+    width: 100%;
+  }
 }
